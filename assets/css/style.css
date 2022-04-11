@@ -1,0 +1,88 @@
+@import url('../../css2');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 0pt;
+    font-style: italic;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #ffffff;
+    animation: border-flicker 2s linear infinite;
+}
+
+p {
+    margin: 0;
+    letter-spacing: 0pt;
+    font-size: 9pt;
+    color: #000000;
+    font-weight: 500;
+    opacity: 0.4;
+}
+
+span {
+    color: #000000;
+    overflow: hidden;
+    width: 400px
+}
+
+span a {
+    text-decoration: none;
+    color: #ffffff;
+    margin: 0;
+    letter-spacing: 0.8pt;
+    font-size: 9pt;
+    color: #ffffff;
+    font-weight: 200;
+    opacity: 0.2;
+    transform: translateX(100%);
+    animation: my-animation 15s linear infinite;
+}
+
+@keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes border-flicker {
+    0% {
+        opacity:0.1;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    2% {
+        opacity:1;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    4% {
+        opacity:0.1;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    
+    8% {
+        opacity:1;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    70% {
+        opacity:0.7;
+        text-shadow: 0 0 10px #ffffff;
+    }
+    100% {
+        opacity:1;
+        text-shadow: 0 0 10px #ffffff;
+    }
+}
